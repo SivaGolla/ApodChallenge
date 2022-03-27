@@ -48,14 +48,8 @@ extension ViewController {
     /// Downloads APOD media
     func downloadApodMedia() {
         LoadingView.start()
-        let requestId = Constants.activeRequestId
-        let urlSearchParams = AstronomyPodRequestModel(id: requestId, date: selectedDate, startDate: nil, endDate: nil, count: nil, thumbs: true)
         
-        let serviceRequest = ApodServiceRequest()
-        serviceRequest.urlSearchParams = urlSearchParams
-        
-        serviceRequest.fetch { [weak self] (result: Result<AstronomyPod, NetworkError>) in
-                        
+        ApodDownloadHelper.downloadApodMedia(selectedDate: selectedDate) { [weak self] (result: Result<AstronomyPod, NetworkError>) in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)

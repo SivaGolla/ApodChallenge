@@ -9,6 +9,7 @@ import Foundation
 
 /// Declares common behaviour of every service
 protocol ServiceProviding {
+    var urlSearchParams: AstronomyPodRequestModel? { get set }
     func makeRequest() -> Request
     func fetch<T>(completion: @escaping (Result<T, NetworkError>) -> Void) where T : Decodable
 }

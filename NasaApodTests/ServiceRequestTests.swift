@@ -11,16 +11,10 @@ import XCTest
 class ServiceRequestTests: XCTestCase {
 
     func testExample() throws {
-        let requestId = Constants.activeRequestId
-        let urlSearchParams = AstronomyPodRequestModel(id: requestId, date: Date(), startDate: nil, endDate: nil, count: nil, thumbs: true)
-        
-        let serviceRequest = MockFetchApodRequest()
-        serviceRequest.urlSearchParams = urlSearchParams
         
         let exp = expectation(description: "Loading APOD")
-
-        serviceRequest.fetch { (result: Result<AstronomyPod, NetworkError>) in
-            
+        
+        ApodDownloadHelper.downloadApodMedia(selectedDate: Date().advanced(by: 60 * 60 * -24)) { (result: Result<AstronomyPod, NetworkError>) in
             switch result {
             case .failure(let error):
                 XCTAssertNotNil(error)
@@ -37,7 +31,7 @@ class ServiceRequestTests: XCTestCase {
             
             exp.fulfill()
         }
-        
+
         waitForExpectations(timeout: 3)
     }
 
