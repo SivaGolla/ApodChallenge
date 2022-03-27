@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MediaRenderingView" customModule="NasaApod" customModuleProvider="target">
+            <connections>
+                <outlet property="explanation" destination="1Ht-3C-HoP" id="59T-HT-GbJ"/>
+                <outlet property="imageTitle" destination="ade-bC-zUu" id="3zD-uA-nJA"/>
+                <outlet property="imageView" destination="nXS-vf-0Sk" id="dPi-tf-AXU"/>
+                <outlet property="webPlayerView" destination="Kb1-lb-h79" id="rM7-D5-Q0v"/>
+                <outlet property="youTublePlayerView" destination="znm-93-ZRB" id="7nD-Gi-PNr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ade-bC-zUu">
+                    <rect key="frame" x="32" y="74" width="350" height="40"/>
+                    <accessibility key="accessibilityConfiguration" identifier="mediaTitle"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="6L4-ys-t1y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nXS-vf-0Sk">
+                    <rect key="frame" x="32" y="122" width="350" height="400"/>
+                    <accessibility key="accessibilityConfiguration" identifier="astronomyImage" label="Astronomy picture Of the Day">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="nXS-vf-0Sk" secondAttribute="height" multiplier="7:8" id="ktc-8S-WSz"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ht-3C-HoP">
+                    <rect key="frame" x="20" y="554" width="374" height="288"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <accessibility key="accessibilityConfiguration" identifier="mediaExplaination"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kb1-lb-h79">
+                    <rect key="frame" x="0.0" y="205.5" width="414" height="233"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Kb1-lb-h79" secondAttribute="height" multiplier="16:9" id="d5F-cE-Lwd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znm-93-ZRB" customClass="YTPlayerView">
+                    <rect key="frame" x="0.0" y="205.5" width="414" height="233"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration" identifier="youTubePlayerView">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="znm-93-ZRB" secondAttribute="height" multiplier="16:9" id="x17-CN-ie0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="znm-93-ZRB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2Gm-ob-5MR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="znm-93-ZRB" secondAttribute="trailing" id="3Qx-x0-UMU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Kb1-lb-h79" secondAttribute="trailing" id="7NV-f1-amu"/>
+                <constraint firstItem="1Ht-3C-HoP" firstAttribute="top" secondItem="nXS-vf-0Sk" secondAttribute="bottom" constant="32" id="DA2-Dz-xXw"/>
+                <constraint firstItem="ade-bC-zUu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="IAV-AI-Ymg"/>
+                <constraint firstItem="znm-93-ZRB" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="NiA-kO-IeE"/>
+                <constraint firstItem="znm-93-ZRB" firstAttribute="centerY" secondItem="nXS-vf-0Sk" secondAttribute="centerY" id="P6a-uu-6fU"/>
+                <constraint firstItem="nXS-vf-0Sk" firstAttribute="width" secondItem="nXS-vf-0Sk" secondAttribute="height" multiplier="7:8" id="Y26-rh-MFX"/>
+                <constraint firstItem="1Ht-3C-HoP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Zen-DG-k0u"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Ht-3C-HoP" secondAttribute="bottom" constant="20" id="aOw-AM-nXZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ade-bC-zUu" secondAttribute="trailing" constant="32" id="dRZ-4o-2fL"/>
+                <constraint firstItem="Kb1-lb-h79" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="diX-Ov-Fi4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Ht-3C-HoP" secondAttribute="trailing" constant="20" id="fFA-dK-YOa"/>
+                <constraint firstItem="Kb1-lb-h79" firstAttribute="centerY" secondItem="nXS-vf-0Sk" secondAttribute="centerY" id="fiZ-5p-9PM"/>
+                <constraint firstItem="Kb1-lb-h79" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kfR-bV-4vF"/>
+                <constraint firstItem="ade-bC-zUu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="lXe-xL-At5"/>
+                <constraint firstItem="nXS-vf-0Sk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="tG5-O5-57J"/>
+                <constraint firstItem="nXS-vf-0Sk" firstAttribute="top" secondItem="ade-bC-zUu" secondAttribute="bottom" constant="8" id="wsz-fk-9Ow"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nXS-vf-0Sk" secondAttribute="trailing" constant="32" id="xHh-IG-eNe"/>
+            </constraints>
+            <point key="canvasLocation" x="289.85507246376812" y="96.428571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
