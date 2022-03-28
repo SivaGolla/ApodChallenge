@@ -39,7 +39,7 @@
                         <bool key="isElement" value="YES"/>
                     </accessibility>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="nXS-vf-0Sk" secondAttribute="height" multiplier="7:8" id="ktc-8S-WSz"/>
+                        <constraint firstAttribute="width" secondItem="nXS-vf-0Sk" secondAttribute="height" multiplier="7:8" id="xab-KY-MjE"/>
                     </constraints>
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ht-3C-HoP">
@@ -77,13 +77,13 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Kb1-lb-h79" secondAttribute="trailing" id="7NV-f1-amu"/>
                 <constraint firstItem="1Ht-3C-HoP" firstAttribute="top" secondItem="nXS-vf-0Sk" secondAttribute="bottom" constant="32" id="DA2-Dz-xXw"/>
                 <constraint firstItem="ade-bC-zUu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="IAV-AI-Ymg"/>
-                <constraint firstItem="znm-93-ZRB" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="NiA-kO-IeE"/>
+                <constraint firstItem="znm-93-ZRB" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="NiA-kO-IeE"/>
                 <constraint firstItem="znm-93-ZRB" firstAttribute="centerY" secondItem="nXS-vf-0Sk" secondAttribute="centerY" id="P6a-uu-6fU"/>
-                <constraint firstItem="nXS-vf-0Sk" firstAttribute="width" secondItem="nXS-vf-0Sk" secondAttribute="height" multiplier="7:8" id="Y26-rh-MFX"/>
+                <constraint firstItem="1Ht-3C-HoP" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.321429" id="UdN-on-Kka"/>
                 <constraint firstItem="1Ht-3C-HoP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Zen-DG-k0u"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Ht-3C-HoP" secondAttribute="bottom" constant="20" id="aOw-AM-nXZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ade-bC-zUu" secondAttribute="trailing" constant="32" id="dRZ-4o-2fL"/>
-                <constraint firstItem="Kb1-lb-h79" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="diX-Ov-Fi4"/>
+                <constraint firstItem="Kb1-lb-h79" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="diX-Ov-Fi4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Ht-3C-HoP" secondAttribute="trailing" constant="20" id="fFA-dK-YOa"/>
                 <constraint firstItem="Kb1-lb-h79" firstAttribute="centerY" secondItem="nXS-vf-0Sk" secondAttribute="centerY" id="fiZ-5p-9PM"/>
                 <constraint firstItem="Kb1-lb-h79" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kfR-bV-4vF"/>

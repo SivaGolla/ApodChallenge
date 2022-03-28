@@ -90,6 +90,9 @@ class MediaRenderingView: UIView {
         webPlayer.backgroundColor = .clear
         webPlayer.isOpaque = false
         webPlayerView.addSubview(self.webPlayer)
+        
+        // wkwebview not responding to constraints
+        webPlayer.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
     /// Renders the remote video
@@ -115,6 +118,7 @@ class MediaRenderingView: UIView {
                 self.mediaRendererType = .web
                 self.showCurrentPlayerAndHideOtherPlayers()
                 self.webPlayer.loadHTMLString(htmlString!, baseURL: nil)
+                self.webPlayerView.layoutIfNeeded()
             }
         }
         ApodDataStorage.shared.updateSavedItem()
