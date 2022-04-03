@@ -12,10 +12,11 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var mediaRenderingView: MediaRenderingView!
+    let segueId = "loadApods"
     
     var selectedDate: Date = Date().advanced(by: 60 * 60 * -24) {
         didSet {
-            downloadApodMedia()
+            //downloadApodMedia()
         }
     }
 
@@ -36,6 +37,14 @@ class ViewController: UIViewController {
         selectedDate = picker.date
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueId {
+            if let destination = segue.destination as? ApodListViewController {
+                destination.numberOfApods = 10
+            }
+        }
+    }
+    
     func populateDatePicker() {
         datePicker.date = Date()
         datePicker.locale = .current
@@ -66,8 +75,10 @@ extension ViewController {
                 self?.mediaRenderingView.apod = apod
             }
         }
-    }
-    
+    }    
+}
+
+extension UIViewController {
     func showErrorPrompt() {
         let alert = UIAlertController(title: "Warning", message: "Failed to Load APOD", preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
