@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -29,12 +29,35 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="OAT-sq-7tZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Xa5-bg-Urs"/>
-                    <constraint firstItem="OAT-sq-7tZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="80" id="b3N-Hl-fdD"/>
-                    <constraint firstItem="chI-Qq-lkd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="40" id="hbG-d5-TKc"/>
+                    <constraint firstItem="OAT-sq-7tZ" firstAttribute="centerY" secondItem="chI-Qq-lkd" secondAttribute="centerY" id="aV6-FE-fvg"/>
+                    <constraint firstItem="OAT-sq-7tZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="60" id="b3N-Hl-fdD"/>
+                    <constraint firstItem="chI-Qq-lkd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="40" id="byv-4D-lwb"/>
+                    <constraint firstItem="chI-Qq-lkd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="30" id="hbG-d5-TKc"/>
                     <constraint firstAttribute="bottom" secondItem="OAT-sq-7tZ" secondAttribute="bottom" id="idh-I4-SVx"/>
                     <constraint firstItem="chI-Qq-lkd" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="rer-qC-3bs"/>
+                    <constraint firstItem="OAT-sq-7tZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="80" id="uW7-t0-n7E"/>
                     <constraint firstAttribute="trailing" secondItem="OAT-sq-7tZ" secondAttribute="trailing" constant="20" id="xGn-am-gsn"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="b3N-Hl-fdD"/>
+                        <exclude reference="uW7-t0-n7E"/>
+                        <exclude reference="byv-4D-lwb"/>
+                        <exclude reference="hbG-d5-TKc"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="constraints">
+                        <include reference="b3N-Hl-fdD"/>
+                        <include reference="hbG-d5-TKc"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=regular">
+                    <mask key="constraints">
+                        <include reference="uW7-t0-n7E"/>
+                        <include reference="byv-4D-lwb"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

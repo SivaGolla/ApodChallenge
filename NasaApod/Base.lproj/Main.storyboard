@@ -59,19 +59,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-header" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-7m-jzK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="275"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="275" id="C0B-di-l1I"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="341.5"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="O19-vK-TNX">
-                                <rect key="frame" x="0.0" y="251" width="414" height="645"/>
+                                <rect key="frame" x="0.0" y="317.5" width="414" height="578.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uRv-7X-jxw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="PMe-7m-jzK" firstAttribute="height" secondItem="Q1j-Qq-TMl" secondAttribute="height" multiplier="0.381138" id="3EC-Mt-0mj"/>
                             <constraint firstItem="uRv-7X-jxw" firstAttribute="trailing" secondItem="O19-vK-TNX" secondAttribute="trailing" id="87M-Dm-cJM"/>
                             <constraint firstItem="O19-vK-TNX" firstAttribute="bottom" secondItem="uRv-7X-jxw" secondAttribute="bottom" constant="34" id="8P7-DL-GMr"/>
                             <constraint firstItem="PMe-7m-jzK" firstAttribute="trailing" secondItem="uRv-7X-jxw" secondAttribute="trailing" id="HKB-80-ucM"/>

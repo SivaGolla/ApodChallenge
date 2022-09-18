@@ -25,8 +25,10 @@ class APodViewController: UIViewController {
         view.accessibilityIdentifier = "homeView"
         datePicker.accessibilityIdentifier = "apodDatePicker"
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        selectedDate = formatter.date(from: "2022/08/01")!
         populateDatePicker()
-        downloadApodMedia()
     }
     
     @IBAction func handleDateSelection() {
@@ -36,7 +38,7 @@ class APodViewController: UIViewController {
     }
     
     func populateDatePicker() {
-        datePicker.date = Date()
+        datePicker.date = selectedDate
         datePicker.locale = .current
         datePicker.preferredDatePickerStyle = .compact
         datePicker.datePickerMode = .date

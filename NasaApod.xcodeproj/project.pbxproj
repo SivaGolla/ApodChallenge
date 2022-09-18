@@ -206,8 +206,8 @@
 			children = (
 				A14C291127EB4EC900C96611 /* AppDelegate.swift */,
 				A14C291327EB4EC900C96611 /* SceneDelegate.swift */,
-				A14C291527EB4EC900C96611 /* APodViewController.swift */,
 				A1E8823A28D6F1DC007DC7E8 /* LandingViewController.swift */,
+				A14C291527EB4EC900C96611 /* APodViewController.swift */,
 				A178AB6427F7399D0042666B /* ApodListViewController.swift */,
 				A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */,
 				A1B5F6DC27F07A1000C960D4 /* ApodDownloadHelper.swift */,
