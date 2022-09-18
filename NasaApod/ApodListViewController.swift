@@ -12,25 +12,29 @@ class ApodListViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var tableview: UITableView!
 
     var numberOfApods = 10
-    var apodItemList = [AstronomyPod]()
+    var dataTasks: [URLSessionDataTask] = []
+    var apodItemList = [AstronomyPictureInfo]()
     let cellReuseId = "ApodTableViewCell"
     let segueId = "loadPodDetailsSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Astronomy Collection"
         tableview.register(UINib(nibName: "ApodTableViewCell", bundle: nil), forCellReuseIdentifier: "ApodTableViewCell")
-        
-        downloadApodMedia()
         
         tableview.rowHeight = UITableView.automaticDimension
         tableview.estimatedRowHeight = 320
+        tableview.prefetchDataSource = self
+        tableview.separatorStyle = .none
+        tableview.separatorColor = .clear
+        downloadApodMedia()
     }
     
     private func downloadApodMedia() {
         LoadingView.start()
         
-        ApodDownloadHelper.downloadApodMedia(count: numberOfApods) { [weak self] (result: Result<[AstronomyPod], NetworkError>) in
+        ApodDownloadHelper.downloadApodMedia(count: numberOfApods) { [weak self] (result: Result<[AstronomyPictureInfo], NetworkError>) in
             
             LoadingView.stop()
             

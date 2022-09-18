@@ -18,15 +18,23 @@ enum NetworkError: Error {
 
 /// Handles various network requests of type Request
 class NetworkManager: NSObject {
+    
+    private let activeSession: URLSession
+    
+    init(session: URLSession) {
+        activeSession = session
+    }
+    
     /// To execute a Request object which was created earlier.
     /// - Parameters:
     ///   - request: Request
     ///   - completion: completion with Result (<T, NetworkError>) of the operation
-    func execute<T: Decodable>(request: Request, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    @discardableResult
+    func execute<T: Decodable>(request: Request, completion: @escaping (Result<T, NetworkError>) -> Void) -> URLSessionDataTask? {
         
         guard let path = request.path.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: path) else {
             completion(.failure(.urlError))
-            return
+            return nil
         }
         
         var urlRequest = URLRequest(url: url)
@@ -42,14 +50,8 @@ class NetworkManager: NSObject {
         if request.method == .post, let body = request.body {
             urlRequest.httpBody = body
         }
-        
-        let config:URLSessionConfiguration = URLSessionConfiguration.default
-        config.requestCachePolicy = .reloadIgnoringLocalCacheData
-        config.urlCache = nil
-        
-        let session:URLSession = URLSession(configuration: config, delegate: self, delegateQueue:OperationQueue.main)
-        
-        let task = session.dataTask(with: urlRequest, completionHandler: { data, response, error in
+                
+        let task = activeSession.dataTask(with: urlRequest, completionHandler: { data, response, error in
             
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(.failure(.badRequest))
@@ -78,6 +80,7 @@ class NetworkManager: NSObject {
             }
         })
         task.resume()
+        return task
     }
 }
     

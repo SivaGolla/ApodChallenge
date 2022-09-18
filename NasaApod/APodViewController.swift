@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  APodViewController.swift
 //  NasaApod
 //
 //  Created by Venkata Sivannarayana Golla on 23/03/22.
@@ -7,23 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class APodViewController: UIViewController {
 
-   
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var mediaRenderingView: MediaRenderingView!
-    let segueId = "loadApods"
     
     var selectedDate: Date = Date().advanced(by: 60 * 60 * -24) {
         didSet {
-            //downloadApodMedia()
+            downloadApodMedia()
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Astronomy Picture Of the Day"
+        title = "Picture Of The Day"
         view.accessibilityIdentifier = "homeView"
         datePicker.accessibilityIdentifier = "apodDatePicker"
         
@@ -36,14 +34,6 @@ class ViewController: UIViewController {
         print("Selected date/time:", picker.date)
         selectedDate = picker.date
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueId {
-            if let destination = segue.destination as? ApodListViewController {
-                destination.numberOfApods = 10
-            }
-        }
-    }
     
     func populateDatePicker() {
         datePicker.date = Date()
@@ -53,12 +43,12 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController {
+extension APodViewController {
     /// Downloads APOD media
     func downloadApodMedia() {
         LoadingView.start()
         
-        ApodDownloadHelper.downloadApodMedia(selectedDate: selectedDate) { [weak self] (result: Result<AstronomyPod, NetworkError>) in
+        ApodDownloadHelper.downloadApodMedia(selectedDate: selectedDate) { [weak self] (result: Result<AstronomyPictureInfo, NetworkError>) in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)

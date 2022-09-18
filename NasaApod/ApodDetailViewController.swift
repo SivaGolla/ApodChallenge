@@ -12,7 +12,7 @@ class ApodDetailViewController: UIViewController {
     @IBOutlet weak var mediaRenderingView: MediaRenderingView!
     @IBOutlet weak var dateTextLebel: UILabel!
     
-    var apod: AstronomyPod!
+    var apod: AstronomyPictureInfo!
     
     override func viewDidLoad() {
         super.viewDidLoad()

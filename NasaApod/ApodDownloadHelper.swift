@@ -8,7 +8,7 @@
 import Foundation
 
 class ApodDownloadHelper {
-    static func downloadApodMedia(selectedDate: Date, completion: @escaping (Result<AstronomyPod, NetworkError>)->Void) {
+    static func downloadApodMedia(selectedDate: Date, completion: @escaping (Result<AstronomyPictureInfo, NetworkError>)->Void) {
         let requestId = Constants.activeRequestId
         let urlSearchParams = AstronomyPodRequestModel(id: requestId, date: selectedDate, startDate: nil, endDate: nil, count: nil, thumbs: true)
         
@@ -17,7 +17,7 @@ class ApodDownloadHelper {
         serviceRequest.fetch(completion: completion)
     }
     
-    static func downloadApodMedia(count: Int, completion: @escaping (Result<[AstronomyPod], NetworkError>)->Void) {
+    static func downloadApodMedia(count: Int, completion: @escaping (Result<[AstronomyPictureInfo], NetworkError>)->Void) {
         let requestId = Constants.activeRequestId
         let urlSearchParams = AstronomyPodRequestModel(id: requestId, date: nil, startDate: nil, endDate: nil, count: count, thumbs: true)
         

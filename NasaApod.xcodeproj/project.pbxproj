@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A14C291227EB4EC900C96611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291127EB4EC900C96611 /* AppDelegate.swift */; };
 		A14C291427EB4EC900C96611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291327EB4EC900C96611 /* SceneDelegate.swift */; };
-		A14C291627EB4EC900C96611 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291527EB4EC900C96611 /* ViewController.swift */; };
+		A14C291627EB4EC900C96611 /* APodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291527EB4EC900C96611 /* APodViewController.swift */; };
 		A14C291927EB4EC900C96611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14C291727EB4EC900C96611 /* Main.storyboard */; };
 		A14C291B27EB4ECB00C96611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14C291A27EB4ECB00C96611 /* Assets.xcassets */; };
 		A14C291E27EB4ECB00C96611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14C291C27EB4ECB00C96611 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 		A14C293327EB4ECB00C96611 /* NasaApodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C293227EB4ECB00C96611 /* NasaApodUITests.swift */; };
 		A14C293527EB4ECB00C96611 /* NasaApodUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C293427EB4ECB00C96611 /* NasaApodUITestsLaunchTests.swift */; };
 		A14C294327EB6C0C00C96611 /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294227EB6C0C00C96611 /* AsyncImageLoader.swift */; };
-		A14C294527EB80C700C96611 /* AstronomyPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294427EB80C700C96611 /* AstronomyPod.swift */; };
+		A14C294527EB80C700C96611 /* AstronomyPictureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294427EB80C700C96611 /* AstronomyPictureInfo.swift */; };
 		A14C294727EB838800C96611 /* String+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294627EB838800C96611 /* String+Custom.swift */; };
 		A14C294927EB8DA400C96611 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294827EB8DA400C96611 /* Environment.swift */; };
 		A14C294C27EB90D400C96611 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294B27EB90D400C96611 /* NetworkManager.swift */; };
@@ -41,6 +41,8 @@
 		A178AB6C27F73A280042666B /* ApodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A178AB6827F73A280042666B /* ApodTableViewCell.xib */; };
 		A178AB6E27F7F0020042666B /* ApodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */; };
 		A178AB6F27F7F0020042666B /* ApodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */; };
+		A178AB71281124A30042666B /* SessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB70281124A30042666B /* SessionProvider.swift */; };
+		A178AB72281124A30042666B /* SessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB70281124A30042666B /* SessionProvider.swift */; };
 		A1B5F6D627F0339C00C960D4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6D527F0339C00C960D4 /* LoadingView.swift */; };
 		A1B5F6DB27F078FE00C960D4 /* ServiceRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DA27F078FE00C960D4 /* ServiceRequestFactory.swift */; };
 		A1B5F6DD27F07A1000C960D4 /* ApodDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DC27F07A1000C960D4 /* ApodDownloadHelper.swift */; };
@@ -49,14 +51,14 @@
 		A1B5F6E527F081D700C960D4 /* ServiceRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DA27F078FE00C960D4 /* ServiceRequestFactory.swift */; };
 		A1B5F6E627F081D700C960D4 /* ApodDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C296527EDF07A00C96611 /* ApodDataStorage.swift */; };
 		A1B5F6E727F081D700C960D4 /* Date+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295A27ECF17500C96611 /* Date+Custom.swift */; };
-		A1B5F6E827F081D700C960D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291527EB4EC900C96611 /* ViewController.swift */; };
+		A1B5F6E827F081D700C960D4 /* APodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291527EB4EC900C96611 /* APodViewController.swift */; };
 		A1B5F6E927F081D700C960D4 /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294227EB6C0C00C96611 /* AsyncImageLoader.swift */; };
 		A1B5F6EA27F081D700C960D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291127EB4EC900C96611 /* AppDelegate.swift */; };
 		A1B5F6EB27F081D700C960D4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294827EB8DA400C96611 /* Environment.swift */; };
 		A1B5F6EC27F081D700C960D4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294B27EB90D400C96611 /* NetworkManager.swift */; };
 		A1B5F6ED27F081D700C960D4 /* ApodServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295327EC514700C96611 /* ApodServiceRequest.swift */; };
 		A1B5F6EE27F081D700C960D4 /* MediaRenderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C296027ED9D1600C96611 /* MediaRenderingView.swift */; };
-		A1B5F6EF27F081D700C960D4 /* AstronomyPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294427EB80C700C96611 /* AstronomyPod.swift */; };
+		A1B5F6EF27F081D700C960D4 /* AstronomyPictureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294427EB80C700C96611 /* AstronomyPictureInfo.swift */; };
 		A1B5F6F027F081D700C960D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291327EB4EC900C96611 /* SceneDelegate.swift */; };
 		A1B5F6F127F081D700C960D4 /* AstronomyPodRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295827ECE62300C96611 /* AstronomyPodRequestModel.swift */; };
 		A1B5F6F227F081D700C960D4 /* ApodDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DC27F07A1000C960D4 /* ApodDownloadHelper.swift */; };
@@ -71,6 +73,12 @@
 		A1B5F6FD27F081D700C960D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14C291727EB4EC900C96611 /* Main.storyboard */; };
 		A1B5F70327F0825400C960D4 /* fetchApods.json in Resources */ = {isa = PBXBuildFile; fileRef = A1B5F6CE27F01E4C00C960D4 /* fetchApods.json */; };
 		A1B5F70427F0825800C960D4 /* MockFetchApodRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6D327F01F5E00C960D4 /* MockFetchApodRequest.swift */; };
+		A1E8823B28D6F1DC007DC7E8 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8823A28D6F1DC007DC7E8 /* LandingViewController.swift */; };
+		A1E8823C28D6F1DC007DC7E8 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8823A28D6F1DC007DC7E8 /* LandingViewController.swift */; };
+		A1E8823F28D6F743007DC7E8 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8823D28D6F743007DC7E8 /* HomeTableViewCell.swift */; };
+		A1E8824028D6F743007DC7E8 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8823D28D6F743007DC7E8 /* HomeTableViewCell.swift */; };
+		A1E8824128D6F743007DC7E8 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E8823E28D6F743007DC7E8 /* HomeTableViewCell.xib */; };
+		A1E8824228D6F743007DC7E8 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E8823E28D6F743007DC7E8 /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +102,7 @@
 		A14C290E27EB4EC900C96611 /* NasaApod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaApod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14C291127EB4EC900C96611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A14C291327EB4EC900C96611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A14C291527EB4EC900C96611 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A14C291527EB4EC900C96611 /* APodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APodViewController.swift; sourceTree = "<group>"; };
 		A14C291827EB4EC900C96611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A14C291A27EB4ECB00C96611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A14C291D27EB4ECB00C96611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,7 +113,7 @@
 		A14C293227EB4ECB00C96611 /* NasaApodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaApodUITests.swift; sourceTree = "<group>"; };
 		A14C293427EB4ECB00C96611 /* NasaApodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaApodUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A14C294227EB6C0C00C96611 /* AsyncImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageLoader.swift; sourceTree = "<group>"; };
-		A14C294427EB80C700C96611 /* AstronomyPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPod.swift; sourceTree = "<group>"; };
+		A14C294427EB80C700C96611 /* AstronomyPictureInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPictureInfo.swift; sourceTree = "<group>"; };
 		A14C294627EB838800C96611 /* String+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Custom.swift"; sourceTree = "<group>"; };
 		A14C294827EB8DA400C96611 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		A14C294B27EB90D400C96611 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -124,6 +132,7 @@
 		A178AB6727F73A280042666B /* ApodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodTableViewCell.swift; sourceTree = "<group>"; };
 		A178AB6827F73A280042666B /* ApodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApodTableViewCell.xib; sourceTree = "<group>"; };
 		A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodDetailViewController.swift; sourceTree = "<group>"; };
+		A178AB70281124A30042666B /* SessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProvider.swift; sourceTree = "<group>"; };
 		A1B5F6CE27F01E4C00C960D4 /* fetchApods.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fetchApods.json; sourceTree = "<group>"; };
 		A1B5F6D327F01F5E00C960D4 /* MockFetchApodRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchApodRequest.swift; sourceTree = "<group>"; };
 		A1B5F6D527F0339C00C960D4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -131,6 +140,9 @@
 		A1B5F6DC27F07A1000C960D4 /* ApodDownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodDownloadHelper.swift; sourceTree = "<group>"; };
 		A1B5F70127F081D700C960D4 /* NasaApod-Prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NasaApod-Prod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B5F70227F081D800C960D4 /* NasaApod copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NasaApod copy-Info.plist"; path = "/Users/sivagolla/Desktop/GitHub/ApodChallenge/NasaApod copy-Info.plist"; sourceTree = "<absolute>"; };
+		A1E8823A28D6F1DC007DC7E8 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		A1E8823D28D6F743007DC7E8 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		A1E8823E28D6F743007DC7E8 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +206,8 @@
 			children = (
 				A14C291127EB4EC900C96611 /* AppDelegate.swift */,
 				A14C291327EB4EC900C96611 /* SceneDelegate.swift */,
-				A14C291527EB4EC900C96611 /* ViewController.swift */,
+				A14C291527EB4EC900C96611 /* APodViewController.swift */,
+				A1E8823A28D6F1DC007DC7E8 /* LandingViewController.swift */,
 				A178AB6427F7399D0042666B /* ApodListViewController.swift */,
 				A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */,
 				A1B5F6DC27F07A1000C960D4 /* ApodDownloadHelper.swift */,
@@ -233,7 +246,7 @@
 		A14C294127EB6BE000C96611 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A14C294427EB80C700C96611 /* AstronomyPod.swift */,
+				A14C294427EB80C700C96611 /* AstronomyPictureInfo.swift */,
 				A14C295827ECE62300C96611 /* AstronomyPodRequestModel.swift */,
 				A14C294827EB8DA400C96611 /* Environment.swift */,
 				A14C296527EDF07A00C96611 /* ApodDataStorage.swift */,
@@ -246,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				A14C294B27EB90D400C96611 /* NetworkManager.swift */,
+				A178AB70281124A30042666B /* SessionProvider.swift */,
 				A14C294D27EC3A5E00C96611 /* Request.swift */,
 				A14C295327EC514700C96611 /* ApodServiceRequest.swift */,
 				A1B5F6DA27F078FE00C960D4 /* ServiceRequestFactory.swift */,
@@ -269,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				A1B5F6D527F0339C00C960D4 /* LoadingView.swift */,
+				A1E8823D28D6F743007DC7E8 /* HomeTableViewCell.swift */,
+				A1E8823E28D6F743007DC7E8 /* HomeTableViewCell.xib */,
 				A14C296027ED9D1600C96611 /* MediaRenderingView.swift */,
 				A14C296227ED9D6900C96611 /* MediaRenderingView.xib */,
 				A178AB6727F73A280042666B /* ApodTableViewCell.swift */,
@@ -427,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A14C296327ED9D6900C96611 /* MediaRenderingView.xib in Resources */,
+				A1E8824228D6F743007DC7E8 /* HomeTableViewCell.xib in Resources */,
 				A14C291E27EB4ECB00C96611 /* LaunchScreen.storyboard in Resources */,
 				A1B5F70327F0825400C960D4 /* fetchApods.json in Resources */,
 				A178AB6C27F73A280042666B /* ApodTableViewCell.xib in Resources */,
@@ -457,6 +474,7 @@
 				A1B5F6FB27F081D700C960D4 /* LaunchScreen.storyboard in Resources */,
 				A1B5F6FC27F081D700C960D4 /* Assets.xcassets in Resources */,
 				A1B5F6FD27F081D700C960D4 /* Main.storyboard in Resources */,
+				A1E8824128D6F743007DC7E8 /* HomeTableViewCell.xib in Resources */,
 				A178AB6B27F73A280042666B /* ApodTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,14 +494,16 @@
 				A14C295B27ECF17500C96611 /* Date+Custom.swift in Sources */,
 				A1B5F70427F0825800C960D4 /* MockFetchApodRequest.swift in Sources */,
 				A178AB6A27F73A280042666B /* ApodTableViewCell.swift in Sources */,
-				A14C291627EB4EC900C96611 /* ViewController.swift in Sources */,
+				A14C291627EB4EC900C96611 /* APodViewController.swift in Sources */,
 				A14C294327EB6C0C00C96611 /* AsyncImageLoader.swift in Sources */,
 				A14C291227EB4EC900C96611 /* AppDelegate.swift in Sources */,
 				A14C294927EB8DA400C96611 /* Environment.swift in Sources */,
 				A14C294C27EB90D400C96611 /* NetworkManager.swift in Sources */,
+				A178AB72281124A30042666B /* SessionProvider.swift in Sources */,
 				A14C295427EC514700C96611 /* ApodServiceRequest.swift in Sources */,
+				A1E8824028D6F743007DC7E8 /* HomeTableViewCell.swift in Sources */,
 				A14C296127ED9D1600C96611 /* MediaRenderingView.swift in Sources */,
-				A14C294527EB80C700C96611 /* AstronomyPod.swift in Sources */,
+				A14C294527EB80C700C96611 /* AstronomyPictureInfo.swift in Sources */,
 				A14C291427EB4EC900C96611 /* SceneDelegate.swift in Sources */,
 				A14C295927ECE62300C96611 /* AstronomyPodRequestModel.swift in Sources */,
 				A1B5F6DD27F07A1000C960D4 /* ApodDownloadHelper.swift in Sources */,
@@ -491,6 +511,7 @@
 				A14C294727EB838800C96611 /* String+Custom.swift in Sources */,
 				A14C29B227EF064000C96611 /* AsyncVideoLoader.swift in Sources */,
 				A1B5F6D627F0339C00C960D4 /* LoadingView.swift in Sources */,
+				A1E8823C28D6F1DC007DC7E8 /* LandingViewController.swift in Sources */,
 				A178AB6F27F7F0020042666B /* ApodDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,11 +540,13 @@
 			files = (
 				A1B5F6E327F081D700C960D4 /* Constants.swift in Sources */,
 				A1B5F6E427F081D700C960D4 /* UIImageView+Custom.swift in Sources */,
+				A1E8823F28D6F743007DC7E8 /* HomeTableViewCell.swift in Sources */,
 				A1B5F6E527F081D700C960D4 /* ServiceRequestFactory.swift in Sources */,
 				A1B5F6E627F081D700C960D4 /* ApodDataStorage.swift in Sources */,
 				A178AB6527F7399D0042666B /* ApodListViewController.swift in Sources */,
 				A1B5F6E727F081D700C960D4 /* Date+Custom.swift in Sources */,
-				A1B5F6E827F081D700C960D4 /* ViewController.swift in Sources */,
+				A1B5F6E827F081D700C960D4 /* APodViewController.swift in Sources */,
+				A178AB71281124A30042666B /* SessionProvider.swift in Sources */,
 				A1B5F6E927F081D700C960D4 /* AsyncImageLoader.swift in Sources */,
 				A1B5F6EA27F081D700C960D4 /* AppDelegate.swift in Sources */,
 				A1B5F6EB27F081D700C960D4 /* Environment.swift in Sources */,
@@ -531,9 +554,10 @@
 				A178AB6927F73A280042666B /* ApodTableViewCell.swift in Sources */,
 				A1B5F6ED27F081D700C960D4 /* ApodServiceRequest.swift in Sources */,
 				A1B5F6EE27F081D700C960D4 /* MediaRenderingView.swift in Sources */,
-				A1B5F6EF27F081D700C960D4 /* AstronomyPod.swift in Sources */,
+				A1B5F6EF27F081D700C960D4 /* AstronomyPictureInfo.swift in Sources */,
 				A1B5F6F027F081D700C960D4 /* SceneDelegate.swift in Sources */,
 				A178AB6E27F7F0020042666B /* ApodDetailViewController.swift in Sources */,
+				A1E8823B28D6F1DC007DC7E8 /* LandingViewController.swift in Sources */,
 				A1B5F6F127F081D700C960D4 /* AstronomyPodRequestModel.swift in Sources */,
 				A1B5F6F227F081D700C960D4 /* ApodDownloadHelper.swift in Sources */,
 				A1B5F6F327F081D700C960D4 /* Request.swift in Sources */,

@@ -30,7 +30,7 @@ class MediaRenderingView: UIView {
     private var webPlayer: WKWebView!
     private var mediaRendererType: MediaRenderType = .image
     
-    var apod: AstronomyPod? = nil {
+    var apod: AstronomyPictureInfo? = nil {
         willSet {
             guard let apodInstance = newValue else {
                 return
@@ -76,6 +76,7 @@ class MediaRenderingView: UIView {
         let viewFromXib = Bundle.main.loadNibNamed("MediaRenderingView", owner: self, options: nil)?.first as! UIView
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
+        imageView.layer.cornerRadius = 8
         youTublePlayerView.delegate = self
         setupWebView()
     }
@@ -97,7 +98,7 @@ class MediaRenderingView: UIView {
     
     /// Renders the remote video
     /// - Parameter apod: AstronomyPod
-    func loadRemoteVideo(apod: AstronomyPod) {
+    func loadRemoteVideo(apod: AstronomyPictureInfo) {
         
         if apod.url.isValidYouTubeUrlPath() {
             guard let videoId = apod.url.youtubeID else {

@@ -9,7 +9,7 @@ import UIKit
 
 /// Saved Apod Media
 class SavedApodMedia {
-    var apod: AstronomyPod? = nil
+    var apod: AstronomyPictureInfo? = nil
     var image: UIImage? = nil
     var urlPath: String = ""
 }
@@ -46,7 +46,7 @@ class ApodDataStorage {
     ///   - apod: new apod
     ///   - image: new downloaded image
     ///   - key: key string
-    func update(apod: AstronomyPod?, image: UIImage?, key: String) {
+    func update(apod: AstronomyPictureInfo?, image: UIImage?, key: String) {
         dataQueue.async(flags: .barrier) {
             let savedMedia = self.savedMediaDictionary[key]
             savedMedia?.apod = apod
