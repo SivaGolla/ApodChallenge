@@ -27,6 +27,7 @@ class MediaRenderingView: UIView {
 
     @IBOutlet weak var youTublePlayerView: YTPlayerView!
     
+    private var photoStore: AstronomyPhotoStore! = AstronomyPhotoStore()
     private var webPlayer: WKWebView!
     private var mediaRendererType: MediaRenderType = .image
     
@@ -43,15 +44,17 @@ class MediaRenderingView: UIView {
             case .image:
                 mediaRendererType = .image
                 showCurrentPlayerAndHideOtherPlayers()
-                imageView.loadRemoteImage(urlPath: apodInstance.hdUrl!, placeHolderImage: nil) { image in
+                photoStore.loadRemoteImage(urlPath: apodInstance.hdUrl!, placeHolderImage: nil) { result in
                     LoadingView.stop()
-                    guard let downloadedImage = image else {
-                        self.loadSavedMedia()
-                        return
-                    }
                     
-                    ApodDataStorage.shared.update(apod: self.apod, image: downloadedImage, key: Constants.activeRequestId)
-                    ApodDataStorage.shared.updateSavedItem()
+                    switch result {
+                    case .failure:
+                        break
+                    case .success(let downloadedImage):
+                        ApodDataStorage.shared.update(apod: self.apod, image: downloadedImage, key: Constants.activeRequestId)
+                        ApodDataStorage.shared.updateSavedItem()
+                        self.imageView.image = downloadedImage
+                    }
                 }
                 
             case .video:

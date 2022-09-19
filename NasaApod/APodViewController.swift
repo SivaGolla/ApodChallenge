@@ -50,7 +50,7 @@ extension APodViewController {
     func downloadApodMedia() {
         LoadingView.start()
         
-        ApodDownloadHelper.downloadApodMedia(selectedDate: selectedDate) { [weak self] (result: Result<AstronomyPictureInfo, NetworkError>) in
+        AstronomyPhotoStore.downloadApodMedia(selectedDate: selectedDate) { [weak self] (result: Result<AstronomyPictureInfo, NetworkError>) in
             switch result {
             case .failure(let error):
                 print(error.localizedDescription)

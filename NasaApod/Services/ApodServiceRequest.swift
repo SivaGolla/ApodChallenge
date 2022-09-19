@@ -62,7 +62,7 @@ class ApodServiceRequest: ServiceProviding {
     func fetch<T>(completion: @escaping (Result<T, NetworkError>) -> Void) where T : Decodable {
         
         let request = makeRequest()
-        let urlSession = ApodSession.shared.activeSession
+        let urlSession = AstronomyModel.shared.activeSession
         NetworkManager(session: urlSession).execute(request: request) { result in
             DispatchQueue.main.async {
                 completion(result)

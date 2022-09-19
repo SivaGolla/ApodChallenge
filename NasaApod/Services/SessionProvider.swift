@@ -7,8 +7,9 @@
 
 import Foundation
 
-class ApodSession {
-    static var shared = ApodSession()
+class AstronomyModel {
+    static var shared = AstronomyModel()
+    let imageStore = ImageStore()
     private init() { }
     
     lazy var activeSession: URLSession = {

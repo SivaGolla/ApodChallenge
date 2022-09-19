@@ -102,7 +102,6 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="SyA-4m-4E5" id="ars-pQ-zLp"/>
                                     <outlet property="delegate" destination="SyA-4m-4E5" id="hv6-aB-UHp"/>
                                 </connections>
                             </tableView>

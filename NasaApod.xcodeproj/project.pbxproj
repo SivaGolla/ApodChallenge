@@ -23,7 +23,6 @@
 		A14C294C27EB90D400C96611 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294B27EB90D400C96611 /* NetworkManager.swift */; };
 		A14C294E27EC3A5E00C96611 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294D27EC3A5E00C96611 /* Request.swift */; };
 		A14C295427EC514700C96611 /* ApodServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295327EC514700C96611 /* ApodServiceRequest.swift */; };
-		A14C295727EC9CF100C96611 /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295627EC9CF100C96611 /* UIImageView+Custom.swift */; };
 		A14C295927ECE62300C96611 /* AstronomyPodRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295827ECE62300C96611 /* AstronomyPodRequestModel.swift */; };
 		A14C295B27ECF17500C96611 /* Date+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295A27ECF17500C96611 /* Date+Custom.swift */; };
 		A14C296127ED9D1600C96611 /* MediaRenderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C296027ED9D1600C96611 /* MediaRenderingView.swift */; };
@@ -45,9 +44,8 @@
 		A178AB72281124A30042666B /* SessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB70281124A30042666B /* SessionProvider.swift */; };
 		A1B5F6D627F0339C00C960D4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6D527F0339C00C960D4 /* LoadingView.swift */; };
 		A1B5F6DB27F078FE00C960D4 /* ServiceRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DA27F078FE00C960D4 /* ServiceRequestFactory.swift */; };
-		A1B5F6DD27F07A1000C960D4 /* ApodDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DC27F07A1000C960D4 /* ApodDownloadHelper.swift */; };
+		A1B5F6DD27F07A1000C960D4 /* AstronomyPhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DC27F07A1000C960D4 /* AstronomyPhotoStore.swift */; };
 		A1B5F6E327F081D700C960D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C296727EEB5A700C96611 /* Constants.swift */; };
-		A1B5F6E427F081D700C960D4 /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295627EC9CF100C96611 /* UIImageView+Custom.swift */; };
 		A1B5F6E527F081D700C960D4 /* ServiceRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DA27F078FE00C960D4 /* ServiceRequestFactory.swift */; };
 		A1B5F6E627F081D700C960D4 /* ApodDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C296527EDF07A00C96611 /* ApodDataStorage.swift */; };
 		A1B5F6E727F081D700C960D4 /* Date+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295A27ECF17500C96611 /* Date+Custom.swift */; };
@@ -61,7 +59,7 @@
 		A1B5F6EF27F081D700C960D4 /* AstronomyPictureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294427EB80C700C96611 /* AstronomyPictureInfo.swift */; };
 		A1B5F6F027F081D700C960D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291327EB4EC900C96611 /* SceneDelegate.swift */; };
 		A1B5F6F127F081D700C960D4 /* AstronomyPodRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295827ECE62300C96611 /* AstronomyPodRequestModel.swift */; };
-		A1B5F6F227F081D700C960D4 /* ApodDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DC27F07A1000C960D4 /* ApodDownloadHelper.swift */; };
+		A1B5F6F227F081D700C960D4 /* AstronomyPhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DC27F07A1000C960D4 /* AstronomyPhotoStore.swift */; };
 		A1B5F6F327F081D700C960D4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294D27EC3A5E00C96611 /* Request.swift */; };
 		A1B5F6F427F081D700C960D4 /* String+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294627EB838800C96611 /* String+Custom.swift */; };
 		A1B5F6F527F081D700C960D4 /* AsyncVideoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C29B127EF064000C96611 /* AsyncVideoLoader.swift */; };
@@ -79,6 +77,10 @@
 		A1E8824028D6F743007DC7E8 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8823D28D6F743007DC7E8 /* HomeTableViewCell.swift */; };
 		A1E8824128D6F743007DC7E8 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E8823E28D6F743007DC7E8 /* HomeTableViewCell.xib */; };
 		A1E8824228D6F743007DC7E8 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E8823E28D6F743007DC7E8 /* HomeTableViewCell.xib */; };
+		A1E8824428D76C26007DC7E8 /* PictureDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8824328D76C26007DC7E8 /* PictureDataSource.swift */; };
+		A1E8824528D76C26007DC7E8 /* PictureDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8824328D76C26007DC7E8 /* PictureDataSource.swift */; };
+		A1E8824728D79B0F007DC7E8 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8824628D79B0F007DC7E8 /* ImageStore.swift */; };
+		A1E8824828D79B0F007DC7E8 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8824628D79B0F007DC7E8 /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,7 +121,6 @@
 		A14C294B27EB90D400C96611 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A14C294D27EC3A5E00C96611 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		A14C295327EC514700C96611 /* ApodServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodServiceRequest.swift; sourceTree = "<group>"; };
-		A14C295627EC9CF100C96611 /* UIImageView+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Custom.swift"; sourceTree = "<group>"; };
 		A14C295827ECE62300C96611 /* AstronomyPodRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPodRequestModel.swift; sourceTree = "<group>"; };
 		A14C295A27ECF17500C96611 /* Date+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Custom.swift"; sourceTree = "<group>"; };
 		A14C296027ED9D1600C96611 /* MediaRenderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRenderingView.swift; sourceTree = "<group>"; };
@@ -137,12 +138,14 @@
 		A1B5F6D327F01F5E00C960D4 /* MockFetchApodRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchApodRequest.swift; sourceTree = "<group>"; };
 		A1B5F6D527F0339C00C960D4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A1B5F6DA27F078FE00C960D4 /* ServiceRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestFactory.swift; sourceTree = "<group>"; };
-		A1B5F6DC27F07A1000C960D4 /* ApodDownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodDownloadHelper.swift; sourceTree = "<group>"; };
+		A1B5F6DC27F07A1000C960D4 /* AstronomyPhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPhotoStore.swift; sourceTree = "<group>"; };
 		A1B5F70127F081D700C960D4 /* NasaApod-Prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NasaApod-Prod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B5F70227F081D800C960D4 /* NasaApod copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NasaApod copy-Info.plist"; path = "/Users/sivagolla/Desktop/GitHub/ApodChallenge/NasaApod copy-Info.plist"; sourceTree = "<absolute>"; };
 		A1E8823A28D6F1DC007DC7E8 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		A1E8823D28D6F743007DC7E8 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		A1E8823E28D6F743007DC7E8 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		A1E8824328D76C26007DC7E8 /* PictureDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDataSource.swift; sourceTree = "<group>"; };
+		A1E8824628D79B0F007DC7E8 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,8 +212,10 @@
 				A1E8823A28D6F1DC007DC7E8 /* LandingViewController.swift */,
 				A14C291527EB4EC900C96611 /* APodViewController.swift */,
 				A178AB6427F7399D0042666B /* ApodListViewController.swift */,
+				A1E8824328D76C26007DC7E8 /* PictureDataSource.swift */,
 				A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */,
-				A1B5F6DC27F07A1000C960D4 /* ApodDownloadHelper.swift */,
+				A1B5F6DC27F07A1000C960D4 /* AstronomyPhotoStore.swift */,
+				A1E8824628D79B0F007DC7E8 /* ImageStore.swift */,
 				A14C296427EDA69900C96611 /* View */,
 				A14C294A27EB90BC00C96611 /* Services */,
 				A14C294127EB6BE000C96611 /* Model */,
@@ -273,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				A14C295A27ECF17500C96611 /* Date+Custom.swift */,
-				A14C295627EC9CF100C96611 /* UIImageView+Custom.swift */,
 				A14C294627EB838800C96611 /* String+Custom.swift */,
 			);
 			path = Extensions;
@@ -488,7 +492,6 @@
 			files = (
 				A178AB6627F7399D0042666B /* ApodListViewController.swift in Sources */,
 				A14C296827EEB5A700C96611 /* Constants.swift in Sources */,
-				A14C295727EC9CF100C96611 /* UIImageView+Custom.swift in Sources */,
 				A1B5F6DB27F078FE00C960D4 /* ServiceRequestFactory.swift in Sources */,
 				A14C296627EDF07A00C96611 /* ApodDataStorage.swift in Sources */,
 				A14C295B27ECF17500C96611 /* Date+Custom.swift in Sources */,
@@ -506,11 +509,13 @@
 				A14C294527EB80C700C96611 /* AstronomyPictureInfo.swift in Sources */,
 				A14C291427EB4EC900C96611 /* SceneDelegate.swift in Sources */,
 				A14C295927ECE62300C96611 /* AstronomyPodRequestModel.swift in Sources */,
-				A1B5F6DD27F07A1000C960D4 /* ApodDownloadHelper.swift in Sources */,
+				A1E8824828D79B0F007DC7E8 /* ImageStore.swift in Sources */,
+				A1B5F6DD27F07A1000C960D4 /* AstronomyPhotoStore.swift in Sources */,
 				A14C294E27EC3A5E00C96611 /* Request.swift in Sources */,
 				A14C294727EB838800C96611 /* String+Custom.swift in Sources */,
 				A14C29B227EF064000C96611 /* AsyncVideoLoader.swift in Sources */,
 				A1B5F6D627F0339C00C960D4 /* LoadingView.swift in Sources */,
+				A1E8824528D76C26007DC7E8 /* PictureDataSource.swift in Sources */,
 				A1E8823C28D6F1DC007DC7E8 /* LandingViewController.swift in Sources */,
 				A178AB6F27F7F0020042666B /* ApodDetailViewController.swift in Sources */,
 			);
@@ -539,7 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1B5F6E327F081D700C960D4 /* Constants.swift in Sources */,
-				A1B5F6E427F081D700C960D4 /* UIImageView+Custom.swift in Sources */,
+				A1E8824428D76C26007DC7E8 /* PictureDataSource.swift in Sources */,
 				A1E8823F28D6F743007DC7E8 /* HomeTableViewCell.swift in Sources */,
 				A1B5F6E527F081D700C960D4 /* ServiceRequestFactory.swift in Sources */,
 				A1B5F6E627F081D700C960D4 /* ApodDataStorage.swift in Sources */,
@@ -552,6 +557,7 @@
 				A1B5F6EB27F081D700C960D4 /* Environment.swift in Sources */,
 				A1B5F6EC27F081D700C960D4 /* NetworkManager.swift in Sources */,
 				A178AB6927F73A280042666B /* ApodTableViewCell.swift in Sources */,
+				A1E8824728D79B0F007DC7E8 /* ImageStore.swift in Sources */,
 				A1B5F6ED27F081D700C960D4 /* ApodServiceRequest.swift in Sources */,
 				A1B5F6EE27F081D700C960D4 /* MediaRenderingView.swift in Sources */,
 				A1B5F6EF27F081D700C960D4 /* AstronomyPictureInfo.swift in Sources */,
@@ -559,7 +565,7 @@
 				A178AB6E27F7F0020042666B /* ApodDetailViewController.swift in Sources */,
 				A1E8823B28D6F1DC007DC7E8 /* LandingViewController.swift in Sources */,
 				A1B5F6F127F081D700C960D4 /* AstronomyPodRequestModel.swift in Sources */,
-				A1B5F6F227F081D700C960D4 /* ApodDownloadHelper.swift in Sources */,
+				A1B5F6F227F081D700C960D4 /* AstronomyPhotoStore.swift in Sources */,
 				A1B5F6F327F081D700C960D4 /* Request.swift in Sources */,
 				A1B5F6F427F081D700C960D4 /* String+Custom.swift in Sources */,
 				A1B5F6F527F081D700C960D4 /* AsyncVideoLoader.swift in Sources */,

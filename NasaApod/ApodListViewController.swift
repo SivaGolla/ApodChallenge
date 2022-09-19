@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ApodListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ApodListViewController: UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
 
     var numberOfApods = 10
     var dataTasks: [URLSessionDataTask] = []
-    var apodItemList = [AstronomyPictureInfo]()
-    let cellReuseId = "ApodTableViewCell"
+    let photoDataSource = PictureDataSource()
+    let photoStore = AstronomyPhotoStore()
     let segueId = "loadPodDetailsSegue"
     
     override func viewDidLoad() {
@@ -22,19 +22,20 @@ class ApodListViewController: UIViewController, UITableViewDataSource, UITableVi
 
         title = "Astronomy Collection"
         tableview.register(UINib(nibName: "ApodTableViewCell", bundle: nil), forCellReuseIdentifier: "ApodTableViewCell")
+        tableview.dataSource = photoDataSource
         
         tableview.rowHeight = UITableView.automaticDimension
         tableview.estimatedRowHeight = 320
-        tableview.prefetchDataSource = self
         tableview.separatorStyle = .none
         tableview.separatorColor = .clear
+        
         downloadApodMedia()
     }
     
     private func downloadApodMedia() {
         LoadingView.start()
         
-        ApodDownloadHelper.downloadApodMedia(count: numberOfApods) { [weak self] (result: Result<[AstronomyPictureInfo], NetworkError>) in
+        AstronomyPhotoStore.downloadApodMedia(count: numberOfApods) { [weak self] (result: Result<[AstronomyPictureInfo], NetworkError>) in
             
             LoadingView.stop()
             
@@ -56,8 +57,8 @@ class ApodListViewController: UIViewController, UITableViewDataSource, UITableVi
                     return
                 }
                 
-                self?.apodItemList = apodList
-                self?.tableview.reloadData()
+                self?.photoDataSource.apodItemList = apodList
+                self?.tableview.reloadSections(IndexSet(integer: 0), with: .none)
             }
         }
     }
@@ -68,36 +69,33 @@ class ApodListViewController: UIViewController, UITableViewDataSource, UITableVi
                 guard let indexPath = tableview.indexPathForSelectedRow else {
                     return
                 }
-                destination.apod = apodItemList[indexPath.row]
+                destination.apod = photoDataSource.apodItemList[indexPath.row]
                 tableview.deselectRow(at: indexPath, animated: true)
             }
         }
     }
 }
 
-extension ApodListViewController: UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return apodItemList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId, for: indexPath) as! ApodTableViewCell
-        
-        let apod = apodItemList[indexPath.row]
-        cell.configure(apod: apod)
-        return cell
-    }
-    
+extension ApodListViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "loadPodDetailsSegue", sender: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let photo = photoDataSource.apodItemList[indexPath.row]
+
+        photoStore.loadRemoteImage(urlPath: photo.hdUrl ?? "", placeHolderImage: nil) { result in
+            
+            guard let photoIndex = self.photoDataSource.apodItemList.firstIndex(of: photo),
+                  case let .success(image) = result else {
+                      return
+                  }
+            
+            if indexPath.row != photoIndex {
+                return
+            }
+            (cell as! ApodTableViewCell).update(image: image)
+        }
     }
 }

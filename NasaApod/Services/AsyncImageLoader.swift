@@ -17,27 +17,33 @@ class AsyncImageLoader {
     ///   - url: remote image endpoint
     ///   - placeholder: optional placeholder image
     ///   - completion: completion handler
-    func loadImageFrom(url: String, placeholder: UIImage?, completion: @escaping ((UIImage?, Error?) -> Void)) {
-        let imageURL = url as NSString
+    func loadImageFrom(imageId: String, url: String, placeholder: UIImage?, completion: @escaping ((Result<UIImage, NetworkError>) -> Void)) {
         
-        //image = placeholder
-        contentUrl = imageURL
+        let photoKey = imageId
+        if let image = AstronomyModel.shared.imageStore.image(forKey: photoKey) {
+            completion(.success(image))
+            return
+        }
+        
         guard let requestURL = URL(string: url) else {
-            completion(placeholder, nil)
+            completion(.failure(.badRequest))
             return
         }
         
         URLSession.shared.dataTask(with: requestURL) { (data, response, error) in
             DispatchQueue.main.async {
                 if error == nil {
-                    if let imageData = data,
-                       let imageToPresent = UIImage (data: imageData) {
-                        completion(imageToPresent, nil)
-                        return
+                    if let imageData = data {
+                        if let imageToPresent = UIImage (data: imageData) {
+                            AstronomyModel.shared.imageStore.setImage(imageToPresent, forKey: imageId)
+                            completion(.success(imageToPresent))
+                            return
+                        }
+                        completion(.failure(.imageCreationError))
                     }
                 }
                 // If any of the above conditions fail then pass back placeholder image
-                completion (placeholder, error)
+                completion (.failure(.internalServerError))
             }
         }.resume ()
     }

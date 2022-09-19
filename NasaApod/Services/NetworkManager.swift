@@ -13,6 +13,7 @@ enum NetworkError: Error {
     case internalServerError
     case requestTimedOut
     case parsingError
+    case imageCreationError
     case noData
 }
 
@@ -69,7 +70,7 @@ class NetworkManager: NSObject {
                     let result = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(result))
                 } catch let error as NSError {
-                    print(error.localizedDescription)
+                    print(error.debugDescription)
                     completion(.failure(.parsingError))
                 }
                 

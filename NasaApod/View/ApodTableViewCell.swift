@@ -22,7 +22,7 @@ class ApodTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        thumbnailImageView = nil
+        thumbnailImageView?.image = nil
         titleLabel.text = ""
         dateText.text = ""
         descriptionLabel.text = ""
@@ -33,14 +33,14 @@ class ApodTableViewCell: UITableViewCell {
 
     }
     
-    func configure(apod: AstronomyPictureInfo) {
+    func updateInfo(apod: AstronomyPictureInfo) {
         titleLabel.text = apod.title
         dateText.text = apod.dateText
         identifer = apod.url
         descriptionLabel.text = apod.explanation
-        thumbnailImageView?.loadRemoteImage(urlPath: apod.url, placeHolderImage: nil, completion: { image in
-            
-        })
     }
     
+    func update(image: UIImage?) {
+        thumbnailImageView?.image = image
+    }
 }
