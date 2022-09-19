@@ -37,34 +37,34 @@ An application to see astronomy pictures uploaded by Nasa. It has 2 options to c
 
 ## Documentation
 
-#### Environment
+##### Environment
 Each target is bound to work according to environment based on target name
 Added an enum for populating end points according to target
 
 
-#### AstronomyPhotoStore
+##### AstronomyPhotoStore
 A photo store provides funtionalities to 
 - fetch picture of the day
 - fetch list of pictures
 - loads a remote image 
 
-#### ImageStore
+##### ImageStore
 It stores downloaded prictures into NSCache using its urlpath as a key to the cache
 
-#### ApodDataStorage
+##### ApodDataStorage
 Provides safe access in a multithreaded environment. Used to save retrieved AstronomyPictureInfo objects
 
-#### AstronomyModel
+##### AstronomyModel
 Singleton class which contains active NSUrlSession and ImageStore objects
 
-#### MediaRenderingView
+##### MediaRenderingView
 A custom view which is capable of 
 - rendering image view
 - youtube url (uses a third party YouTubeiOSPlayerHelper library for YT playback support)
 - web video url (uses WebKit to play web videos)
 
-#### NetworkManager
+##### NetworkManager
 Executes a given urlRequest using a NSUrlSession. Generaic method to fetch data of any type which is codable
 
-#### ServiceRequestFactory
+##### ServiceRequestFactory
 Provides either service request or mock request based on target settings
