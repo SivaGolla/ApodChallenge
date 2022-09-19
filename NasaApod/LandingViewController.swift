@@ -26,6 +26,8 @@ class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.accessibilityIdentifier = "homeView"
+        tableview.accessibilityIdentifier = "homeTableView"
         tableview.layer.cornerRadius = 24
         tableview.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
         tableview.dataSource = self
@@ -57,6 +59,16 @@ extension LandingViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath) as! HomeTableViewCell
         cell.selectionStyle = .none
+        
+        let cellType = HomeCellType(rawValue: indexPath.row)!
+        
+        switch cellType {
+        case .pod:
+            cell.accessibilityIdentifier = "podViewCell"
+        case .aCollection:
+            cell.accessibilityIdentifier = "podListViewCell"
+        }
+        
         let info = homeCellInfoList[indexPath.row]
         cell.configure(title: info.title, bgImageName: info.bgImageName)
         

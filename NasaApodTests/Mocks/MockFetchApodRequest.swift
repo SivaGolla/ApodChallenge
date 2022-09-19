@@ -6,7 +6,6 @@
 //
 
 import Foundation
-@testable import NasaApod
 
 class MockFetchApodRequest: ServiceProviding {
     var urlSearchParams: AstronomyPodRequestModel?
@@ -14,7 +13,13 @@ class MockFetchApodRequest: ServiceProviding {
     /// Generic implementation of fetch APOD service
     func fetch<T>(completion: @escaping (Result<T, NetworkError>) -> Void) where T : Decodable {
         
-        guard let mockResponseFileUrl = Bundle(for: MockFetchApodRequest.self).url(forResource: "fetchApods", withExtension: "json"),
+        makeRequest()
+        
+        var jsonFileName = "fetchApods"
+        if let requestParams = urlSearchParams, (requestParams.count ?? 0) > 0 {
+            jsonFileName = "AstronomyPicCollection"
+        }
+        guard let mockResponseFileUrl = Bundle(for: MockFetchApodRequest.self).url(forResource: jsonFileName, withExtension: "json"),
               let data = try? Data(contentsOf: mockResponseFileUrl) else {
                   return completion(.failure(.badRequest))
               }
@@ -29,6 +34,7 @@ class MockFetchApodRequest: ServiceProviding {
     /// Populates request based on query parameters
     /// Also saves a formatted request into ApodDataStorage
     /// - Returns: Request
+    @discardableResult
     func makeRequest() -> Request {
         
         let reqUrlPath = "https://api.nasa.gov/planetary/apod?api_key=xSq3ugePAFtrj2BQik6JMED9AofRhzFAmKuJIJbZ"

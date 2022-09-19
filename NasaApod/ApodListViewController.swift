@@ -21,6 +21,7 @@ class ApodListViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Astronomy Collection"
+        view.accessibilityIdentifier = "astronomyCollection"
         tableview.register(UINib(nibName: "ApodTableViewCell", bundle: nil), forCellReuseIdentifier: "ApodTableViewCell")
         tableview.dataSource = photoDataSource
         

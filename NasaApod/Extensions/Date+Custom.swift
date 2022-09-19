@@ -15,13 +15,4 @@ extension Date {
         dateformat.dateFormat = "yyyy-MM-dd"
         return dateformat.string(from: self)
     }
-    
-    /// Converts string to date with Apod date format
-    /// - Parameter dateString: date string
-    /// - Returns: converted date object
-    func apodFormatDate(from dateString: String) -> Date? {
-        let dateformat = DateFormatter()
-        dateformat.dateFormat = "yyyy-MM-dd"
-        return dateformat.date(from: dateString)
-    }
 }

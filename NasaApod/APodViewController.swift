@@ -22,7 +22,7 @@ class APodViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Picture Of The Day"
-        view.accessibilityIdentifier = "homeView"
+        view.accessibilityIdentifier = "podView"
         datePicker.accessibilityIdentifier = "apodDatePicker"
         
         let formatter = DateFormatter()

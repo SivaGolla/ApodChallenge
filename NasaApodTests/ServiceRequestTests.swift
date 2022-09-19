@@ -10,16 +10,49 @@ import XCTest
 
 class ServiceRequestTests: XCTestCase {
 
-    func testExample() throws {
+    func testAstronomyModelActiveSession() {
+        XCTAssertNotNil(AstronomyModel.shared.activeSession)
+    }
+    
+    func testApodRequestParams() throws {
         
         let exp = expectation(description: "Loading APOD")
         
-        ApodDownloadHelper.downloadApodMedia(selectedDate: Date().advanced(by: 60 * 60 * -24)) { (result: Result<AstronomyPod, NetworkError>) in
+        AstronomyPhotoStore.downloadApodMedia(selectedDate: Date().advanced(by: 60 * 60 * -24)) { (result: Result<AstronomyPictureInfo, NetworkError>) in
             switch result {
             case .failure(let error):
                 XCTAssertNotNil(error)
                 
             case .success(let apod):
+                XCTAssertTrue(!apod.title.isEmpty)
+                XCTAssertTrue(!apod.dateText.isEmpty)
+                XCTAssertTrue(!apod.explanation.isEmpty)
+                XCTAssertTrue(!apod.url.isEmpty)
+                
+                let mediaType = MediaType(rawValue: apod.mediaType.rawValue)
+                XCTAssertNotNil(mediaType)
+            }
+            
+            exp.fulfill()
+        }
+
+        waitForExpectations(timeout: 3)
+    }
+    
+    func testApodListRequestParams() throws {
+        
+        let exp = expectation(description: "Loading APOD List")
+        let numberOfApods = 10
+        
+        AstronomyPhotoStore.downloadApodMedia(count: numberOfApods) { (result: Result<[AstronomyPictureInfo], NetworkError>) in
+            switch result {
+            case .failure(let error):
+                XCTAssertNotNil(error)
+                
+            case .success(let apodList):
+                XCTAssertTrue(!apodList.isEmpty)
+                
+                let apod = apodList[0]
                 XCTAssertTrue(!apod.title.isEmpty)
                 XCTAssertTrue(!apod.dateText.isEmpty)
                 XCTAssertTrue(!apod.explanation.isEmpty)

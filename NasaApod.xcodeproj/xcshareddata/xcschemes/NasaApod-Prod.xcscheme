@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A14C290D27EB4EC900C96611"
-               BuildableName = "NasaApod.app"
-               BlueprintName = "NasaApod"
+               BlueprintIdentifier = "A1B5F6DE27F081D700C960D4"
+               BuildableName = "NasaApod-Prod.app"
+               BlueprintName = "NasaApod-Prod"
                ReferencedContainer = "container:NasaApod.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,29 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A14C292327EB4ECB00C96611"
-               BuildableName = "NasaApodTests.xctest"
-               BlueprintName = "NasaApodTests"
-               ReferencedContainer = "container:NasaApod.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A14C292D27EB4ECB00C96611"
-               BuildableName = "NasaApodUITests.xctest"
-               BlueprintName = "NasaApodUITests"
-               ReferencedContainer = "container:NasaApod.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -65,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A14C290D27EB4EC900C96611"
-            BuildableName = "NasaApod.app"
-            BlueprintName = "NasaApod"
+            BlueprintIdentifier = "A1B5F6DE27F081D700C960D4"
+            BuildableName = "NasaApod-Prod.app"
+            BlueprintName = "NasaApod-Prod"
             ReferencedContainer = "container:NasaApod.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -82,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A14C290D27EB4EC900C96611"
-            BuildableName = "NasaApod.app"
-            BlueprintName = "NasaApod"
+            BlueprintIdentifier = "A1B5F6DE27F081D700C960D4"
+            BuildableName = "NasaApod-Prod.app"
+            BlueprintName = "NasaApod-Prod"
             ReferencedContainer = "container:NasaApod.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

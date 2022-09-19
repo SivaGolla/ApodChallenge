@@ -21,11 +21,29 @@ class NasaApodUITests: XCTestCase {
 
     }
     
-    func testSelectAPreviousDate() {
+    func testNavToPictureOfTheDayPage() {
         
         XCTAssertTrue(application.isDisplayingHomeScreen)
         
-        //XCTAssertTrue(application.staticTexts["mediaTitle"].exists)
+        XCTAssertTrue(application.tables["homeTableView"].exists)
+        XCTAssertTrue(application.tables.cells.count > 0)
+        XCTAssertTrue(application.cells["podViewCell"].exists)
+        application.cells["podViewCell"].tap()
+        sleep(1)
+        XCTAssertTrue(application.isDisplayingPictureOfTheDayScreen)
+    }
+    
+    func testNavToPodAndSelectDate() {
+        
+        XCTAssertTrue(application.isDisplayingHomeScreen)
+        
+        XCTAssertTrue(application.tables["homeTableView"].exists)
+        XCTAssertTrue(application.tables.cells.count > 0)
+        XCTAssertTrue(application.cells["podViewCell"].exists)
+        application.cells["podViewCell"].tap()
+        sleep(1)
+        XCTAssertTrue(application.isDisplayingPictureOfTheDayScreen)
+        
         XCTAssertTrue(application.images["astronomyImage"].exists)
         //XCTAssertTrue(application.textViews["mediaExplaination"].exists)
         
@@ -48,11 +66,49 @@ class NasaApodUITests: XCTestCase {
         expectation.isInverted = true
         wait(for: [expectation], timeout: 1)
     }
+    
+    func testNavToAstronomyPicListPage() {
+        
+        XCTAssertTrue(application.isDisplayingHomeScreen)
+        
+        XCTAssertTrue(application.tables["homeTableView"].exists)
+        XCTAssertTrue(application.tables.cells.count > 0)
+        XCTAssertTrue(application.cells["podListViewCell"].exists)
+        application.cells["podListViewCell"].tap()
+        sleep(1)
+        XCTAssertTrue(application.isDisplayingAstronomyCollectionScreen)
+    }
+    
+    func testNavToPodDetailPage() {
+        
+        XCTAssertTrue(application.isDisplayingHomeScreen)
+        
+        XCTAssertTrue(application.tables["homeTableView"].exists)
+        XCTAssertTrue(application.tables.cells.count > 0)
+        XCTAssertTrue(application.cells["podListViewCell"].exists)
+        application.cells["podListViewCell"].tap()
+        sleep(1)
+        XCTAssertTrue(application.isDisplayingAstronomyCollectionScreen)
+        XCTAssertTrue(application.cells.count > 0)
+        
+        application.cells.element(boundBy: 0).tap()
+        sleep(1)
+        XCTAssertTrue(application.images["astronomyImage"].exists)
+        XCTAssertTrue(application.staticTexts["mediaTitle"].exists)
+    }
 }
 
 extension XCUIApplication {
     var isDisplayingHomeScreen: Bool {
         return otherElements["homeView"].exists
+    }
+    
+    var isDisplayingPictureOfTheDayScreen: Bool {
+        return otherElements["podView"].exists
+    }
+    
+    var isDisplayingAstronomyCollectionScreen: Bool {
+        return otherElements["astronomyCollection"].exists
     }
     
     func tapCoordinate(at point: CGPoint) {

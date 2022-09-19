@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A149E8B728D8E37B00AC8CAE /* AstronomyPicCollection.json in Resources */ = {isa = PBXBuildFile; fileRef = A149E8B528D8E14200AC8CAE /* AstronomyPicCollection.json */; };
+		A149E8B928D8E95900AC8CAE /* UtilityFunctionalityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149E8B828D8E95900AC8CAE /* UtilityFunctionalityTests.swift */; };
 		A14C291227EB4EC900C96611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291127EB4EC900C96611 /* AppDelegate.swift */; };
 		A14C291427EB4EC900C96611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291327EB4EC900C96611 /* SceneDelegate.swift */; };
 		A14C291627EB4EC900C96611 /* APodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291527EB4EC900C96611 /* APodViewController.swift */; };
@@ -101,6 +103,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A149E8B528D8E14200AC8CAE /* AstronomyPicCollection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AstronomyPicCollection.json; sourceTree = "<group>"; };
+		A149E8B828D8E95900AC8CAE /* UtilityFunctionalityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctionalityTests.swift; sourceTree = "<group>"; };
 		A14C290E27EB4EC900C96611 /* NasaApod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaApod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14C291127EB4EC900C96611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A14C291327EB4EC900C96611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				A1B5F6CD27F01E0800C960D4 /* JSon Responses */,
 				A14C292827EB4ECB00C96611 /* ApodRequestTests.swift */,
 				A14C29B327EF46EA00C96611 /* ServiceRequestTests.swift */,
+				A149E8B828D8E95900AC8CAE /* UtilityFunctionalityTests.swift */,
 			);
 			path = NasaApodTests;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				A1B5F6CE27F01E4C00C960D4 /* fetchApods.json */,
+				A149E8B528D8E14200AC8CAE /* AstronomyPicCollection.json */,
 			);
 			path = "JSon Responses";
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 				A178AB6C27F73A280042666B /* ApodTableViewCell.xib in Resources */,
 				A14C291B27EB4ECB00C96611 /* Assets.xcassets in Resources */,
 				A14C291927EB4EC900C96611 /* Main.storyboard in Resources */,
+				A149E8B728D8E37B00AC8CAE /* AstronomyPicCollection.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A14C292927EB4ECB00C96611 /* ApodRequestTests.swift in Sources */,
+				A149E8B928D8E95900AC8CAE /* UtilityFunctionalityTests.swift in Sources */,
 				A14C29B427EF46EB00C96611 /* ServiceRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -889,7 +897,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -920,7 +928,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
