@@ -20,9 +20,9 @@ extension Environment {
 
         switch targetName {
         case "NasaApod-Prod":
-            return Environment.uat
-        case "NasaApod-Uat":
             return Environment.prod
+        case "NasaApod-Uat":
+            return Environment.uat
         default:
             return Environment.dev
         }

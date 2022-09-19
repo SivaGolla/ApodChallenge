@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12E529928D8F451005EABE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C296727EEB5A700C96611 /* Constants.swift */; };
+		A12E529A28D8F451005EABE3 /* PictureDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8824328D76C26007DC7E8 /* PictureDataSource.swift */; };
+		A12E529B28D8F451005EABE3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8823D28D6F743007DC7E8 /* HomeTableViewCell.swift */; };
+		A12E529C28D8F451005EABE3 /* ServiceRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DA27F078FE00C960D4 /* ServiceRequestFactory.swift */; };
+		A12E529D28D8F451005EABE3 /* ApodDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C296527EDF07A00C96611 /* ApodDataStorage.swift */; };
+		A12E529E28D8F451005EABE3 /* ApodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB6427F7399D0042666B /* ApodListViewController.swift */; };
+		A12E529F28D8F451005EABE3 /* Date+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295A27ECF17500C96611 /* Date+Custom.swift */; };
+		A12E52A028D8F451005EABE3 /* APodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291527EB4EC900C96611 /* APodViewController.swift */; };
+		A12E52A128D8F451005EABE3 /* AstronomyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB70281124A30042666B /* AstronomyModel.swift */; };
+		A12E52A228D8F451005EABE3 /* AsyncImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294227EB6C0C00C96611 /* AsyncImageLoader.swift */; };
+		A12E52A328D8F451005EABE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291127EB4EC900C96611 /* AppDelegate.swift */; };
+		A12E52A428D8F451005EABE3 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294827EB8DA400C96611 /* Environment.swift */; };
+		A12E52A528D8F451005EABE3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294B27EB90D400C96611 /* NetworkManager.swift */; };
+		A12E52A628D8F451005EABE3 /* ApodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB6727F73A280042666B /* ApodTableViewCell.swift */; };
+		A12E52A728D8F451005EABE3 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8824628D79B0F007DC7E8 /* ImageStore.swift */; };
+		A12E52A828D8F451005EABE3 /* ApodServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295327EC514700C96611 /* ApodServiceRequest.swift */; };
+		A12E52A928D8F451005EABE3 /* MediaRenderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C296027ED9D1600C96611 /* MediaRenderingView.swift */; };
+		A12E52AA28D8F451005EABE3 /* AstronomyPictureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294427EB80C700C96611 /* AstronomyPictureInfo.swift */; };
+		A12E52AB28D8F451005EABE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291327EB4EC900C96611 /* SceneDelegate.swift */; };
+		A12E52AC28D8F451005EABE3 /* ApodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */; };
+		A12E52AD28D8F451005EABE3 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8823A28D6F1DC007DC7E8 /* LandingViewController.swift */; };
+		A12E52AE28D8F451005EABE3 /* AstronomyPodRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C295827ECE62300C96611 /* AstronomyPodRequestModel.swift */; };
+		A12E52AF28D8F451005EABE3 /* AstronomyPhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DC27F07A1000C960D4 /* AstronomyPhotoStore.swift */; };
+		A12E52B028D8F451005EABE3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294D27EC3A5E00C96611 /* Request.swift */; };
+		A12E52B128D8F451005EABE3 /* String+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C294627EB838800C96611 /* String+Custom.swift */; };
+		A12E52B228D8F451005EABE3 /* AsyncVideoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C29B127EF064000C96611 /* AsyncVideoLoader.swift */; };
+		A12E52B328D8F451005EABE3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6D527F0339C00C960D4 /* LoadingView.swift */; };
+		A12E52B528D8F451005EABE3 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = A12E529628D8F451005EABE3 /* YouTubeiOSPlayerHelper */; };
+		A12E52B728D8F451005EABE3 /* MediaRenderingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14C296227ED9D6900C96611 /* MediaRenderingView.xib */; };
+		A12E52B828D8F451005EABE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14C291C27EB4ECB00C96611 /* LaunchScreen.storyboard */; };
+		A12E52B928D8F451005EABE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14C291A27EB4ECB00C96611 /* Assets.xcassets */; };
+		A12E52BA28D8F451005EABE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14C291727EB4EC900C96611 /* Main.storyboard */; };
+		A12E52BB28D8F451005EABE3 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E8823E28D6F743007DC7E8 /* HomeTableViewCell.xib */; };
+		A12E52BC28D8F451005EABE3 /* ApodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A178AB6827F73A280042666B /* ApodTableViewCell.xib */; };
 		A149E8B728D8E37B00AC8CAE /* AstronomyPicCollection.json in Resources */ = {isa = PBXBuildFile; fileRef = A149E8B528D8E14200AC8CAE /* AstronomyPicCollection.json */; };
 		A149E8B928D8E95900AC8CAE /* UtilityFunctionalityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149E8B828D8E95900AC8CAE /* UtilityFunctionalityTests.swift */; };
 		A14C291227EB4EC900C96611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C291127EB4EC900C96611 /* AppDelegate.swift */; };
@@ -42,8 +76,8 @@
 		A178AB6C27F73A280042666B /* ApodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A178AB6827F73A280042666B /* ApodTableViewCell.xib */; };
 		A178AB6E27F7F0020042666B /* ApodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */; };
 		A178AB6F27F7F0020042666B /* ApodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */; };
-		A178AB71281124A30042666B /* SessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB70281124A30042666B /* SessionProvider.swift */; };
-		A178AB72281124A30042666B /* SessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB70281124A30042666B /* SessionProvider.swift */; };
+		A178AB71281124A30042666B /* AstronomyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB70281124A30042666B /* AstronomyModel.swift */; };
+		A178AB72281124A30042666B /* AstronomyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178AB70281124A30042666B /* AstronomyModel.swift */; };
 		A1B5F6D627F0339C00C960D4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6D527F0339C00C960D4 /* LoadingView.swift */; };
 		A1B5F6DB27F078FE00C960D4 /* ServiceRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DA27F078FE00C960D4 /* ServiceRequestFactory.swift */; };
 		A1B5F6DD27F07A1000C960D4 /* AstronomyPhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B5F6DC27F07A1000C960D4 /* AstronomyPhotoStore.swift */; };
@@ -103,6 +137,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A12E52C028D8F451005EABE3 /* NasaApod-Uat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NasaApod-Uat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12E52C128D8F451005EABE3 /* NasaApod-Prod copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NasaApod-Prod copy-Info.plist"; path = "/Users/sivagolla/Desktop/GitHub/LloydTechTest/NasaApod-Prod copy-Info.plist"; sourceTree = "<absolute>"; };
 		A149E8B528D8E14200AC8CAE /* AstronomyPicCollection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AstronomyPicCollection.json; sourceTree = "<group>"; };
 		A149E8B828D8E95900AC8CAE /* UtilityFunctionalityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctionalityTests.swift; sourceTree = "<group>"; };
 		A14C290E27EB4EC900C96611 /* NasaApod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaApod.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,7 +173,7 @@
 		A178AB6727F73A280042666B /* ApodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodTableViewCell.swift; sourceTree = "<group>"; };
 		A178AB6827F73A280042666B /* ApodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApodTableViewCell.xib; sourceTree = "<group>"; };
 		A178AB6D27F7F0020042666B /* ApodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodDetailViewController.swift; sourceTree = "<group>"; };
-		A178AB70281124A30042666B /* SessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProvider.swift; sourceTree = "<group>"; };
+		A178AB70281124A30042666B /* AstronomyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyModel.swift; sourceTree = "<group>"; };
 		A1B5F6CE27F01E4C00C960D4 /* fetchApods.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fetchApods.json; sourceTree = "<group>"; };
 		A1B5F6D327F01F5E00C960D4 /* MockFetchApodRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchApodRequest.swift; sourceTree = "<group>"; };
 		A1B5F6D527F0339C00C960D4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -153,6 +189,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A12E52B428D8F451005EABE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12E52B528D8F451005EABE3 /* YouTubeiOSPlayerHelper in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A14C290B27EB4EC900C96611 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +238,7 @@
 				A14C293127EB4ECB00C96611 /* NasaApodUITests */,
 				A14C290F27EB4EC900C96611 /* Products */,
 				A1B5F70227F081D800C960D4 /* NasaApod copy-Info.plist */,
+				A12E52C128D8F451005EABE3 /* NasaApod-Prod copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +249,7 @@
 				A14C292427EB4ECB00C96611 /* NasaApodTests.xctest */,
 				A14C292E27EB4ECB00C96611 /* NasaApodUITests.xctest */,
 				A1B5F70127F081D700C960D4 /* NasaApod-Prod.app */,
+				A12E52C028D8F451005EABE3 /* NasaApod-Uat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,7 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				A14C294B27EB90D400C96611 /* NetworkManager.swift */,
-				A178AB70281124A30042666B /* SessionProvider.swift */,
+				A178AB70281124A30042666B /* AstronomyModel.swift */,
 				A14C294D27EC3A5E00C96611 /* Request.swift */,
 				A14C295327EC514700C96611 /* ApodServiceRequest.swift */,
 				A1B5F6DA27F078FE00C960D4 /* ServiceRequestFactory.swift */,
@@ -322,6 +368,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A12E529428D8F451005EABE3 /* NasaApod-Uat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A12E52BD28D8F451005EABE3 /* Build configuration list for PBXNativeTarget "NasaApod-Uat" */;
+			buildPhases = (
+				A12E529828D8F451005EABE3 /* Sources */,
+				A12E52B428D8F451005EABE3 /* Frameworks */,
+				A12E52B628D8F451005EABE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A12E529528D8F451005EABE3 /* PBXTargetDependency */,
+			);
+			name = "NasaApod-Uat";
+			packageProductDependencies = (
+				A12E529628D8F451005EABE3 /* YouTubeiOSPlayerHelper */,
+			);
+			productName = NasaApod;
+			productReference = A12E52C028D8F451005EABE3 /* NasaApod-Uat.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A14C290D27EB4EC900C96611 /* NasaApod */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A14C293827EB4ECB00C96611 /* Build configuration list for PBXNativeTarget "NasaApod" */;
@@ -440,6 +507,7 @@
 			projectRoot = "";
 			targets = (
 				A1B5F6DE27F081D700C960D4 /* NasaApod-Prod */,
+				A12E529428D8F451005EABE3 /* NasaApod-Uat */,
 				A14C290D27EB4EC900C96611 /* NasaApod */,
 				A14C292327EB4ECB00C96611 /* NasaApodTests */,
 				A14C292D27EB4ECB00C96611 /* NasaApodUITests */,
@@ -448,6 +516,19 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A12E52B628D8F451005EABE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12E52B728D8F451005EABE3 /* MediaRenderingView.xib in Resources */,
+				A12E52B828D8F451005EABE3 /* LaunchScreen.storyboard in Resources */,
+				A12E52B928D8F451005EABE3 /* Assets.xcassets in Resources */,
+				A12E52BA28D8F451005EABE3 /* Main.storyboard in Resources */,
+				A12E52BB28D8F451005EABE3 /* HomeTableViewCell.xib in Resources */,
+				A12E52BC28D8F451005EABE3 /* ApodTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A14C290C27EB4EC900C96611 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -493,6 +574,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A12E529828D8F451005EABE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12E529928D8F451005EABE3 /* Constants.swift in Sources */,
+				A12E529A28D8F451005EABE3 /* PictureDataSource.swift in Sources */,
+				A12E529B28D8F451005EABE3 /* HomeTableViewCell.swift in Sources */,
+				A12E529C28D8F451005EABE3 /* ServiceRequestFactory.swift in Sources */,
+				A12E529D28D8F451005EABE3 /* ApodDataStorage.swift in Sources */,
+				A12E529E28D8F451005EABE3 /* ApodListViewController.swift in Sources */,
+				A12E529F28D8F451005EABE3 /* Date+Custom.swift in Sources */,
+				A12E52A028D8F451005EABE3 /* APodViewController.swift in Sources */,
+				A12E52A128D8F451005EABE3 /* AstronomyModel.swift in Sources */,
+				A12E52A228D8F451005EABE3 /* AsyncImageLoader.swift in Sources */,
+				A12E52A328D8F451005EABE3 /* AppDelegate.swift in Sources */,
+				A12E52A428D8F451005EABE3 /* Environment.swift in Sources */,
+				A12E52A528D8F451005EABE3 /* NetworkManager.swift in Sources */,
+				A12E52A628D8F451005EABE3 /* ApodTableViewCell.swift in Sources */,
+				A12E52A728D8F451005EABE3 /* ImageStore.swift in Sources */,
+				A12E52A828D8F451005EABE3 /* ApodServiceRequest.swift in Sources */,
+				A12E52A928D8F451005EABE3 /* MediaRenderingView.swift in Sources */,
+				A12E52AA28D8F451005EABE3 /* AstronomyPictureInfo.swift in Sources */,
+				A12E52AB28D8F451005EABE3 /* SceneDelegate.swift in Sources */,
+				A12E52AC28D8F451005EABE3 /* ApodDetailViewController.swift in Sources */,
+				A12E52AD28D8F451005EABE3 /* LandingViewController.swift in Sources */,
+				A12E52AE28D8F451005EABE3 /* AstronomyPodRequestModel.swift in Sources */,
+				A12E52AF28D8F451005EABE3 /* AstronomyPhotoStore.swift in Sources */,
+				A12E52B028D8F451005EABE3 /* Request.swift in Sources */,
+				A12E52B128D8F451005EABE3 /* String+Custom.swift in Sources */,
+				A12E52B228D8F451005EABE3 /* AsyncVideoLoader.swift in Sources */,
+				A12E52B328D8F451005EABE3 /* LoadingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A14C290A27EB4EC900C96611 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,7 +624,7 @@
 				A14C291227EB4EC900C96611 /* AppDelegate.swift in Sources */,
 				A14C294927EB8DA400C96611 /* Environment.swift in Sources */,
 				A14C294C27EB90D400C96611 /* NetworkManager.swift in Sources */,
-				A178AB72281124A30042666B /* SessionProvider.swift in Sources */,
+				A178AB72281124A30042666B /* AstronomyModel.swift in Sources */,
 				A14C295427EC514700C96611 /* ApodServiceRequest.swift in Sources */,
 				A1E8824028D6F743007DC7E8 /* HomeTableViewCell.swift in Sources */,
 				A14C296127ED9D1600C96611 /* MediaRenderingView.swift in Sources */,
@@ -559,7 +674,7 @@
 				A178AB6527F7399D0042666B /* ApodListViewController.swift in Sources */,
 				A1B5F6E727F081D700C960D4 /* Date+Custom.swift in Sources */,
 				A1B5F6E827F081D700C960D4 /* APodViewController.swift in Sources */,
-				A178AB71281124A30042666B /* SessionProvider.swift in Sources */,
+				A178AB71281124A30042666B /* AstronomyModel.swift in Sources */,
 				A1B5F6E927F081D700C960D4 /* AsyncImageLoader.swift in Sources */,
 				A1B5F6EA27F081D700C960D4 /* AppDelegate.swift in Sources */,
 				A1B5F6EB27F081D700C960D4 /* Environment.swift in Sources */,
@@ -584,6 +699,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A12E529528D8F451005EABE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A14C29AD27EEC8B400C96611 /* YouTubeiOSPlayerHelper */;
+		};
 		A14C292627EB4ECB00C96611 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A14C290D27EB4EC900C96611 /* NasaApod */;
@@ -624,6 +743,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A12E52BE28D8F451005EABE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R3739K2Z26;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NasaApod-Uat-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.NasaApod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A12E52BF28D8F451005EABE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R3739K2Z26;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NasaApod-Uat-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.NasaApod;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A14C293627EB4ECB00C96611 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -893,7 +1074,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R3739K2Z26;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NasaApod copy-Info.plist";
+				INFOPLIST_FILE = "NasaApod-Prod-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -924,7 +1105,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R3739K2Z26;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "NasaApod copy-Info.plist";
+				INFOPLIST_FILE = "NasaApod-Prod-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -949,6 +1130,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A12E52BD28D8F451005EABE3 /* Build configuration list for PBXNativeTarget "NasaApod-Uat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A12E52BE28D8F451005EABE3 /* Debug */,
+				A12E52BF28D8F451005EABE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A14C290927EB4EC900C96611 /* Build configuration list for PBXProject "NasaApod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -997,6 +1187,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A12E529728D8F451005EABE3 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		A14C29AA27EEC8A600C96611 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
@@ -1016,6 +1214,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A12E529628D8F451005EABE3 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A12E529728D8F451005EABE3 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
 		A14C29AB27EEC8A600C96611 /* YouTubeiOSPlayerHelper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A14C29AA27EEC8A600C96611 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;

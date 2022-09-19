@@ -1,5 +1,5 @@
 //
-//  SessionProvider.swift
+//  AstronomyModel.swift
 //  NasaApod
 //
 //  Created by Venkata Sivannarayana Golla on 21/04/22.
